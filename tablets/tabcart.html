@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!---Font awesome CDN-->
+    <script src="https://kit.fontawesome.com/bb34682fcb.js" crossorigin="anonymous"></script>
+    <link href="../assets/fontawesome-free-5.15.1-web/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <title>Tablets cart </title>
+</head>
+<body>
+    <div class="fadein">
+    <header>
+        <div class="overlay"></div>
+        <nav>
+            <h2 class="site-title">TaBlEtS CaRt <i class="fas fa-cart-arrow-down"></i></h2>
+            <img src="../assets/logo.png" style="margin-left: 120px;" height="80px" width="70px"> 
+            <ul>
+                    <li><a href="../home.html"><i class="fas fa-house-user"></i> Home</a></li>
+                    <li><a href="../about.html"><i class="fas fa-users"></i> About Us</a>
+                    <li><a href="../tablets/tablets.html"><i class="fas fa-chevron-circle-left"></i> Back</a></li>
+                    <li class="cart">
+                        <a href="tabcart.html">
+                            <ion-icon name="basket"></ion-icon>Cart<span>0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        
+    </header>
+    <div class="products-container">
+       <div class="product-header">
+            <h4 class="product-title">PRODUCT</h4>
+            <h4 class="price">PRICE</h4>
+            <h4 class="quantity">QUANTITY</h4>
+            <h4 class="total">TOTAL</h4>
+       </div>
+       
+       <div class="products">
+
+       </div>
+    </div>
+
+    
+
+    <script src="tabcart.js"></script>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+      </div>
+  </div>
+      <script>
+          $(window).on("load",function(){
+            $(".loader-wrapper").fadeOut("slow");
+          });
+      </script>
+
+
+</body>
+</html>

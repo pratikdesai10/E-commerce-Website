@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url(https://fonts.googleapis.com/css?family=Cookie);
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color:rgb(198, 182, 255) ;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 4px;
+  padding-bottom:70px;
+  border-radius: 7%;
+  background-color: #f1f1f1;
+  color: #434343;
+    text-align: center;
+}
+
+.card img{
+  border-radius: inherit;
+}
+.about-section {
+  padding: 2px;
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  color:white;
+  opacity: 0.8;
+  font-family: 'Cookie', cursive;
+  font-size: 40px;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width:100vw;
+    height: 100vh;
+    background-color: #eee;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+  }
+  .loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #242f3f;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    animation: loader 2s infinite ease;
+  }
+  .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+  }
+  
+  @keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+  }
+  
+  @keyframes loader-inner {
+    0% { height: 0%;}
+    25% { height: 0%;}
+    50% { height: 100%;}
+    75% { height: 100%;}
+    100% { height: 0%;}
+  }
+
+</style>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div class="about-section">
+  <h1>About Us</h1>
+  <p>Our mission is to create e-commerce website with user-friendly interface that eases customer
+    shopping experience ultimately resulting in optimum delivery of the chosen goods."Keep shopping and keep smiling &#128516". </p>
+  
+</div>
+
+<h2 style="text-align:center; font-family:'Cookie',cursive;font-size:80px ;" >Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="./assets/john.jpg" alt="Jane" style="width:100%;height:355px;">
+      <div class="container">
+        <h2>JOHN NIXON</h2>
+        <p class="title">Team Member</p>
+        <p>Some text </p>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="./assets/gopinath.jpg" alt="Mike" style="width:100%;height:355px;">
+      <div class="container">
+        <h2>V GOPINATH</h2>
+        <p class="title">Team Member</p>
+        <p>Some text </p>
+        
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="./assets/aryan.jpg" alt="John" style="width:100%;height:355px; " >
+      <div class="container">
+        <h2>ARYAN KULKARNI</h2>
+        <p class="title">Team Member</p>
+        <p>Some text </p>
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+    <div class="column">
+      <div class="card">
+        <img src="./assets/pratik.jpg" alt="Jane" style="width:100%;height:355px;">
+        <div class="container">
+          <h2>PRATIK DESAI</h2>
+          <p class="title">Team Member</p>
+          <p>Some text </p>
+          
+          
+        </div>
+      </div>
+  </div>
+  </div>
+
+  <div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+
+  <script>
+      $(window).on("load",function(){
+        $(".loader-wrapper").fadeOut("slow");
+      });
+  </script>
+
+</body>
+</html>

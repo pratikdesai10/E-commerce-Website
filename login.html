@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+      a{
+        color: rgb(0, 0, 0);
+        background-color: black;
+        padding: 10px;
+        text-decoration: none;
+      }      
+      /* Full-width inputs */
+      input[type=text], input[type=password] {
+        width: 30%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+      .btn{
+        background-color: #45ccb8;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 30%;
+      }
+            
+      /* Add a hover effect for buttons */
+      button:hover {
+        opacity: 0.8;
+      }
+      body{
+        background-image:url("./assets/AA.jpg") ;
+
+      }
+      h1{
+        font-family: Verdana, Geneva, Tahoma, sans-serif ;
+        font-weight: 1000;
+        background-color:khaki ;
+      }
+      /* Extra style for the cancel button (red) */
+      .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+      }
+      
+      /* Center the avatar image inside this container */
+      .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+      }
+
+      body {
+    margin: 0;
+    padding: 0;
+    width:100vw;
+    height: 100vh;
+    background-color: #eee;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+  }
+  .loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #242f3f;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    animation: loader 2s infinite ease;
+  }
+  .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+  }
+  
+  @keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+  }
+  
+  @keyframes loader-inner {
+    0% { height: 0%;}
+    25% { height: 0%;}
+    50% { height: 100%;}
+    75% { height: 100%;}
+    100% { height: 0%;}
+  }
+      
+      /* Avatar image */
+      img.avatar {
+        width: 12%;
+        border-radius: 50%;
+      }
+      
+      /* Add padding to containers */
+      .container {
+        padding: 16px;
+        color: #412cfa;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+      .new{
+        background-color: #000000;
+        text-decoration:dashed;
+        text-decoration-color:rgb(9, 255, 0);
+        color: cornsilk;
+        }
+      /* The "Forgot password" text */
+      span.psw {
+        float: center;
+        padding-top: 16px;
+       
+      }
+      
+      /* Change styles for span and cancel button on extra small screens */
+      @media screen and (max-width: 300px) {
+        .psw {
+          display: block;
+          float: none;
+          color:rgb(255, 0, 0);
+        }
+        .cancelbtn {
+          width: 100%;
+        }
+      }
+      </style>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <img src="./assets/logo.png" height="110px" width="100px">
+    <form action="./home.html" method="post">
+        <div class="imgcontainer">
+          <img src="./assets/3.png" alt="Welcome" class="avatar" style="border-radius: 50%;">
+        </div>
+        <div class="container" align="center">
+          <input class="new" type="text" placeholder="Enter Username" minlength="3" name="uname" required>
+          <br>
+          <input class="new" type="password" placeholder="Enter Password" minlength="8" name="psw" required>
+            <br>
+           <button type="submit" id="login" class="btn">Login</button><br>
+           <button type="reset" class="btn">Cancel</button>
+            <br>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label><br><br>
+             <a href="new_user.html" style="color: white; opacity: 0.9;">New user sign up?</a>
+        </div>
+      
+        <div class="container" align="center"style="background-color:#5f5f5f96">
+        <a href="Forgot.html" style="color: white; opacity: 0.9;">Forgot password?</a>
+        </div>
+      </form>
+
+      <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+      </div>
+  
+      <script>
+          $(window).on("load",function(){
+            $(".loader-wrapper").fadeOut("slow");
+          });
+      </script>
+
+</body>
+</html>  
